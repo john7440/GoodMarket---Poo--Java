@@ -6,7 +6,8 @@ public abstract class Product {
 	
 	//Data
 	
-	private static int productId = 0;
+	private int id;
+	private static int nextId = 1;
 	
 	private String name;
 	private double unitPrice;
@@ -17,25 +18,31 @@ public abstract class Product {
 	
 	
 	//constructor
-	public Product(int productId, String name, double unitPrice, String unit, double stockQuantity, LocalDate pickingDate,int shelfLifeDays) {
+	public Product(String name, double unitPrice, String unit, double stockQuantity, LocalDate pickingDate,int shelfLifeDays) {
+		this.id = nextId;
+		setName(name);
+		setUnitPrice(unitPrice);
+		setUnit(unit);
+		setStockQuantity(stockQuantity);
+		setPickingDate(pickingDate);
+		setShelfLifeDays(shelfLifeDays);
+		nextId++;
 		
 	}
 
 	
 	// getter and setter
 
-	public static int getProductId() {
-		return productId;
+	public int getProductId() {
+		return id;
 	}
 
-	public static void setProductId(int productId) {
-		Product.productId = productId;
-	}
-	
+
 
 	public String getName() {
 		return name;
 	}
+
 
 	public void setName(String name) {
 		this.name = name;
@@ -90,6 +97,9 @@ public abstract class Product {
 	public void setShelfLifeDays(int shelfLifeDays) {
 		this.shelfLifeDays = shelfLifeDays;
 	}
+	
 
 	// methods
+	public abstract void calculateExpirationDate();
+
 }
