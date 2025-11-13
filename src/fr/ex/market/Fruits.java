@@ -19,7 +19,7 @@ public class Fruits extends Product {
 	public String toString() {
 		return "Fruit: " + this.getName() + "\n" +
 			   "Stock: " + this.getStockQuantity() + " " + this.getUnit() + "\n"+
-			   "Prix: " + this.getUnitPrice() + "/" + this.getUnit() + "\n" +
+			   "Prix: " + this.getUnitPrice() + "€ /" + this.getUnit() + "\n" +
 			   "Date de récolte: " + this.getPickingDate() + "\n" +
 			   "Duré de conservation: " + this.getShelfLifeDays() + " jours\n";
 				
