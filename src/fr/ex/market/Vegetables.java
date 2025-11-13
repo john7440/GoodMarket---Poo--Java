@@ -15,5 +15,15 @@ public class Vegetables extends Product {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	@Override
+	public String toString() {
+		return "Légume: " + this.getName() + "\n" +
+			   "Stock: " + this.getStockQuantity() + " " + this.getUnit() + "\n"+
+			   "Prix: " + this.getUnitPrice() + "€ /" + this.getUnit() + "\n" +
+			   "Date de récolte: " + this.getPickingDate() + "\n" +
+			   "Duré de conservation: " + this.getShelfLifeDays() + " jours\n";
+				
+	}
 
 }
