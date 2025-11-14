@@ -34,8 +34,30 @@ public class Main {
 		Vegetables radis = new Vegetables("Radis noir", 5.00, "pièces", 10, LocalDate.of(2025,11, 8), 48);
 		Vegetables salsifis = new Vegetables("Salsifis", 2.50, "kg", 3, LocalDate.of(2025, 3, 21), 125);
 		
-		System.out.println(pomme);
-		System.out.println(radis);
+		
+		// ajout a l'arrayList
+		marketInventory.add(clementine);
+		marketInventory.add(datte);
+		marketInventory.add(grenade);
+		marketInventory.add(kaki);
+		marketInventory.add(kiwi);
+		marketInventory.add(mandarine);
+		marketInventory.add(pamplemousse);
+		marketInventory.add(poire);
+		marketInventory.add(pomme);
+		
+		marketInventory.add(carotte);
+		marketInventory.add(choux);
+		marketInventory.add(chouvert);
+		marketInventory.add(courge);
+		marketInventory.add(endive);
+		marketInventory.add(epinard);
+		marketInventory.add(poireau);
+		marketInventory.add(potiron);
+		marketInventory.add(radis);
+		marketInventory.add(salsifis);
+		
+		
 
 	}
 
