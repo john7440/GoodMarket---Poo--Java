@@ -1,6 +1,7 @@
 package fr.ex.market;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public abstract class Product {
 	
@@ -99,5 +100,22 @@ public abstract class Product {
 
 	// methods
 	public abstract void calculateExpirationDate();
+	
+	public void updateStockAfterSell(ArrayList<Product> inventory, String name, int quantity) {
+		for(Product product : inventory) {
+			if (name.equalsIgnoreCase(product.getName())){
+				if (quantity <= product.getStockQuantity() && quantity > 0) {
+					product.setStockQuantity(product.getStockQuantity() - quantity);
+					System.out.println("Voici votre achat: " + "\n" + product.getName() + "\n" + 
+										product.getUnitPrice() + " x " + quantity + " = " + (product.getUnitPrice() * quantity) + " €" );
+				} else {
+					System.out.println("Désolé la quantité séectionnée n'est pas disponible!");
+				}
+				
+			}
+		}
+		
+		
+	}
 
 }
