@@ -1,13 +1,12 @@
 package fr.ex.market;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 
-public class Main {
+public class Main{
 
 	public static void main(String[] args) {
 		
-		ArrayList<Product> marketInventory = new ArrayList<>();
+		Market inventory = new Market();
 		
 		/// Création des fruits
 		
@@ -35,30 +34,41 @@ public class Main {
 		Vegetables salsifis = new Vegetables("Salsifis", 2.50, "kg", 3, LocalDate.of(2025, 3, 21), 125);
 		
 		
-		// ajout a l'arrayList
-		marketInventory.add(clementine);
-		marketInventory.add(datte);
-		marketInventory.add(grenade);
-		marketInventory.add(kaki);
-		marketInventory.add(kiwi);
-		marketInventory.add(mandarine);
-		marketInventory.add(pamplemousse);
-		marketInventory.add(poire);
-		marketInventory.add(pomme);
-		
-		marketInventory.add(carotte);
-		marketInventory.add(choux);
-		marketInventory.add(chouvert);
-		marketInventory.add(courge);
-		marketInventory.add(endive);
-		marketInventory.add(epinard);
-		marketInventory.add(poireau);
-		marketInventory.add(potiron);
-		marketInventory.add(radis);
-		marketInventory.add(salsifis);
-		
-		
 
+		// ajout a l'arrayList
+		inventory.addProduct(clementine);
+		inventory.addProduct(datte);
+		inventory.addProduct(grenade);
+		inventory.addProduct(kaki);
+		inventory.addProduct(kiwi);
+		inventory.addProduct(mandarine);
+		inventory.addProduct(pamplemousse);
+		inventory.addProduct(poire);
+		inventory.addProduct(pomme);
+		
+		inventory.addProduct(carotte);
+		inventory.addProduct(choux);
+		inventory.addProduct(chouvert);
+		inventory.addProduct(courge);
+		inventory.addProduct(endive);
+		inventory.addProduct(epinard);
+		inventory.addProduct(poireau);
+		inventory.addProduct(potiron);
+		inventory.addProduct(radis);
+		inventory.addProduct(salsifis);
+		
+		
+		salsifis.calculateExpirationDate();
+		
+		System.out.println("--avant");
+		System.out.println(datte);
+		
+		inventory.sellProduct("datte", 2);
+		
+		System.out.println("--après la vente");
+		System.out.println(datte);
 	}
+	
+	
 
 }
