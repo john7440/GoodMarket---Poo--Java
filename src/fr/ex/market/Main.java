@@ -60,6 +60,13 @@ public class Main{
 		// test de la date d'exp
 		salsifis.calculateExpirationDate();
 		
+		// methodes d'interfaces
+		System.out.println("\n================");
+		salsifis.daysRemainingBeforeExpiration();
+		System.out.println("Is ripe: " + salsifis.isRipe());
+		System.out.println("Is expired: " + salsifis.isExpired());
+		System.out.println("\n================\n");
+		
 		//test vente
 		System.out.println("--avant");
 		
@@ -69,6 +76,8 @@ public class Main{
 
 		System.out.println("--après la vente");
 		System.out.println(datte);
+		
+		
 		
 		//affichage de l'inventaire complt
 		for (Product product: inventory.getInventory()) {
