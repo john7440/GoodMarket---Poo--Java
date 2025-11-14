@@ -21,7 +21,21 @@ public class Main {
 		Fruits poire = new Fruits("Poire", 2.50, "kg", 5, LocalDate.of(2025, 12, 25) , 40);
 		Fruits pomme  = new Fruits("Pomme", 1.50, "kg", 8, LocalDate.of(2025, 11, 10) , 100);
 		
+		
+		//Création des légumes
+		Vegetables carotte = new Vegetables("Carotte", 1.30, "kg", 7, LocalDate.of(2025,4, 22), 68);
+		Vegetables choux = new Vegetables("Choux de Bruxelles", 4.00, "kg", 4, LocalDate.of(2025, 6, 19), 123);
+		Vegetables chouvert= new Vegetables("Choux vert", 2.50, "pièces", 12, LocalDate.of(2025, 1, 12), 165);
+		Vegetables courge = new Vegetables("Courge Butternut", 2.50, "pièces", 6, LocalDate.of(2025,12, 22), 69);
+		Vegetables endive = new Vegetables("Endive", 2.50, "kg", 5, LocalDate.of(2025,6, 2), 89);
+		Vegetables epinard = new Vegetables("Epinard", 2.60, "kg", 4, LocalDate.of(2024,12, 22), 168);
+		Vegetables poireau = new Vegetables("Poireau", 1.20, "kg", 5, LocalDate.of(2025,4, 15), 201);
+		Vegetables potiron = new Vegetables("Potiron", 2.50, "pièces", 6, LocalDate.of(2025,4, 22), 68);
+		Vegetables radis = new Vegetables("Radis noir", 5.00, "pièces", 10, LocalDate.of(2025,11, 8), 48);
+		Vegetables salsifis = new Vegetables("Salsifis", 2.50, "kg", 3, LocalDate.of(2025, 3, 21), 125);
+		
 		System.out.println(pomme);
+		System.out.println(radis);
 
 	}
 
