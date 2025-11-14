@@ -29,7 +29,7 @@ public class Fruits extends Product implements Consumable{
 	public boolean isRipe() {
 		LocalDate today = LocalDate.now();
 	    long daysSincePicking = java.time.temporal.ChronoUnit.DAYS.between(getPickingDate(), today);
-	    return daysSincePicking >= 20;
+	    return daysSincePicking >= 20 && !isExpired();
 	}
 
 	@Override
