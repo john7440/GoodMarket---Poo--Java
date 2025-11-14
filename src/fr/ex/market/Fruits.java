@@ -10,10 +10,10 @@ public class Fruits extends Product {
 		
 	}
 
-	@Override
+	 @Override
 	public void calculateExpirationDate() {
-		// TODO Auto-generated method stub
-	}
+	    System.out.println("Expiration: " + getPickingDate().plusDays(getShelfLifeDays()));
+	    }
 	
 	@Override
 	public String toString() {
