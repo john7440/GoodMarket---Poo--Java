@@ -57,16 +57,24 @@ public class Main{
 		inventory.addProduct(radis);
 		inventory.addProduct(salsifis);
 		
-		
+		// test de la date d'exp
 		salsifis.calculateExpirationDate();
 		
+		//test vente
 		System.out.println("--avant");
+		
 		System.out.println(datte);
 		
 		inventory.sellProduct("datte", 2);
-		
+
 		System.out.println("--après la vente");
 		System.out.println(datte);
+		
+		//affichage de l'inventaire complt
+		for (Product product: inventory.getInventory()) {
+			System.out.println(product);
+			
+		}
 	}
 	
 	
