@@ -58,25 +58,21 @@ public class Main{
 		inventory.addProduct(salsifis);
 		
 		// test de la date d'exp
-		salsifis.calculateExpirationDate();
 		
-		// methodes d'interfaces
-		System.out.println("\n================");
-		salsifis.daysRemainingBeforeExpiration();
-		System.out.println("Is ripe: " + salsifis.isRipe());
-		System.out.println("Is expired: " + salsifis.isExpired());
-		System.out.println("\n================\n");
+		
+		
 		
 		//test vente
 		System.out.println("--avant");
-		
 		System.out.println(datte);
+		System.out.println(epinard);
 		
 		inventory.sellProduct("datte", 2);
+		inventory.sellProduct("epinard", 3);
 
 		System.out.println("--après la vente");
 		System.out.println(datte);
-		
+		System.out.println(epinard);
 		
 		
 		//affichage de l'inventaire complt
@@ -84,6 +80,24 @@ public class Main{
 			System.out.println(product);
 			
 		}
+		
+		// methodes d'interfaces
+		System.out.println("\n======Légume=========");
+		System.out.println("Légume: " + salsifis.getName());
+		System.out.println("Is ripe: " + salsifis.isRipe());
+		System.out.println("Is expired: " + salsifis.isExpired());
+		salsifis.daysRemainingBeforeExpiration();
+		salsifis.calculateExpirationDate();
+		System.out.println("\n================\n");
+				
+		
+		System.out.println("\n======Fruit=========");
+		System.out.println("Fruit: " + clementine.getName());
+		System.out.println("Is ripe: " + clementine.isRipe());
+		System.out.println("Is expired: " + clementine.isExpired());
+		clementine.daysRemainingBeforeExpiration();
+		clementine.calculateExpirationDate();
+		System.out.println("\n================\n");
 	}
 	
 	
