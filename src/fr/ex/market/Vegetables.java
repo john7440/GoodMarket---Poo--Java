@@ -4,12 +4,15 @@ import java.time.LocalDate;
 
 public class Vegetables extends Product implements Consumable {
 
+	// constructeur
 	public Vegetables(String name, double unitPrice, String unit, double stockQuantity, LocalDate pickingDate,
 			int shelfLifeDays) {
 		super(name, unitPrice, unit, stockQuantity, pickingDate, shelfLifeDays);
 		
 	}
-
+	
+	//methodes
+	
 	 @Override
 	public void calculateExpirationDate() {
 		 LocalDate expirationDate = getPickingDate().plusDays(getShelfLifeDays());
@@ -26,11 +29,12 @@ public class Vegetables extends Product implements Consumable {
 			   "Duré de conservation: " + this.getShelfLifeDays() + " jours\n";	
 	}
 
+	// méthodes d'interface (consumable )
 	@Override
 	public boolean isRipe() {
 		LocalDate today = LocalDate.now();
 	    long daysSincePicking = java.time.temporal.ChronoUnit.DAYS.between(getPickingDate(), today);
-	    return daysSincePicking >= 15;
+	    return daysSincePicking >= 15 && !isExpired();
 		
 	}
 
