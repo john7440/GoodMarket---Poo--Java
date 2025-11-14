@@ -10,11 +10,11 @@ public class Vegetables extends Product {
 		
 	}
 
-	@Override
+	 @Override
 	public void calculateExpirationDate() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Expiration: " + getPickingDate().plusDays(getShelfLifeDays()));
 	}
+		
 	
 	@Override
 	public String toString() {
@@ -22,8 +22,7 @@ public class Vegetables extends Product {
 			   "Stock: " + this.getStockQuantity() + " " + this.getUnit() + "\n"+
 			   "Prix: " + this.getUnitPrice() + "€ /" + this.getUnit() + "\n" +
 			   "Date de récolte: " + this.getPickingDate() + "\n" +
-			   "Duré de conservation: " + this.getShelfLifeDays() + " jours\n";
-				
+			   "Duré de conservation: " + this.getShelfLifeDays() + " jours\n";	
 	}
 
 }
